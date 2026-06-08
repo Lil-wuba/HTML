@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<style>
+  .box { overflow: hidden; white-space: nowrap; margin: 10px 0; }
+  .text { display: inline-block; font-size: 20px; }
+
+  @keyframes alternate {
+    0%   { transform: translateX(0%); }
+    50%  { transform: translateX(calc(100vw - 130px)); }
+    100% { transform: translateX(0%); }
+  }
+
+  @keyframes slide {
+    from { transform: translateX(-100%); }
+    to   { transform: translateX(0%); }
+  }
+
+  @keyframes scroll {
+    from { transform: translateX(100vw); }
+    to   { transform: translateX(-100%); }
+  }
+
+  .alternate { animation: alternate 4s ease-in-out infinite; }
+  .slide     { animation: slide 2s ease forwards; }
+  .scroll    { animation: scroll 5s linear infinite; }
+</style>
+
+<div class="box"><span class="text alternate">ALTERNATE</span></div>
+<div class="box"><span class="text slide">SLIDE</span></div>
+<div class="box"><span class="text scroll">SCROLL</span></div>
+
+</body>
+</html>
