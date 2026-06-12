@@ -1,0 +1,162 @@
+:root{
+    
+    --primary: #0F172A;      
+    --secondary: #D4AF37;    
+    --accent: #F8F5F0;       
+    --text: #E5E7EB;         
+    --text-dark: #374151;    
+    --card: #1E293B;         
+    --hover: #E6C15A;        
+}
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    align-items: cneter;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    background-color: var(--primary);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+#restaurant-name {
+    color: var(--secondary);
+    font-family: "Lavishly Yours", cursive;
+    font-size: 2.5rem;
+    margin: 0;
+    line-height: 1.4;      
+    padding: 0.3rem 0;     
+    letter-spacing: 1px;
+}
+nav{
+    display: flex;
+    gap: 2rem;
+}
+nav a{
+    color: var(--text);
+    font-family: "poppins0",sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.3s ease;
+}
+ nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--secondary);
+    transition: width 0.3s ease;
+}
+nav a:hover::after {
+    width: 100%;
+}
+nav a[href="reservation"] {
+    background-color: var(--secondary);
+    color: var(--primary);
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    font-weight: 600;
+}
+nav {
+    display: flex;
+    gap: 1.2rem;       
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+nav a[href="reservation"]:hover {
+    background-color: var(--hover);
+    color: var(--primary);
+}
+nav a[href="reservation"]::after
+{
+    display: none;
+}
+#home {
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--primary);
+    color: var(--text);   /* light gray text, visible on dark background */
+}
+
+
+#home p {
+    font-size: 3rem;
+    color: var(--secondary);
+}
+body{
+    font-family: "Lavishly Yours", cursive;
+    font-size : 15px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    background-color: var(--accent);
+    color: var(--text-dark);
+}
+.btn {
+    background: var(--secondary);
+    color: var(--primary);
+}
+
+.btn:hover {
+    background: var(--hover);
+}
+
+.card {
+    background: var(--card);
+}
+.dish-feature{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 4rem 2rem;
+    flex-wrap: wrap;
+    background-color: var(--primary);
+    color: var(--text);
+}
+.dish-feature.reverse{
+    flex-direction: row-reverse;
+}
+.dish-img{
+    flex: 0 0 300px;
+    opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.dish-img img{
+    width : 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.dish-text{
+    flex:0 0 300px;
+    opacity: 0;
+    transform:  translateY(80px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    transition-delay: 0.2s;
+
+}
+.dish-text h3{
+    color: var(--secondary);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+.dish-feature.show .dish-img,
+.dish-feature.show .dish-text{
+    opacity: 1;
+    transform: translateY(0);
+}

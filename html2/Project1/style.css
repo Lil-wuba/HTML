@@ -12,7 +12,11 @@
   --transition: 0.3s ease;
 }
 
-/* ── Reset ── */
+body{
+  background-image: url(https://media.istockphoto.com/id/183311464/photo/group-of-people-discussing-on-meeting-high-angle-view.jpg?s=2048x2048&w=is&k=20&c=DO3fVlUmVUCapC1owPGPM3HfVdce7cZC6etmsr8cF6o=);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 *, *::before, *::after {
   box-sizing: border-box;
 }
