@@ -86,7 +86,7 @@ nav a[href="reservation"]::after
     justify-content: center;
     text-align: center;
     background-color: var(--primary);
-    color: var(--text);   /* light gray text, visible on dark background */
+    color: var(--text);   
 }
 
 
